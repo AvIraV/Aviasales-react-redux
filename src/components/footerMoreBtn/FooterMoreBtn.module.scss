@@ -1,0 +1,40 @@
+@import '../../variables.module.scss';
+
+.footer {
+    margin: 20px 0 50px 252px;
+  }
+  
+  .footer__btn {
+    width: 502px;
+    height: 50px;
+    background: $active-blue;
+    border: 0;
+    border-radius: 5px;
+    cursor: pointer;
+  
+    font-size: 12px;
+    text-align: center;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: $text-btn;
+  }
+  
+  .footer__btn:hover {
+    background: $active-blue-hover;
+  }
+
+  @media (max-width: 768px) {
+    .footer {
+      margin: 0 auto;
+      margin-left: 30px;
+      margin-top: 20px;
+      // margin: 20px 0 20px 0px;
+    }
+  }
+
+  @media (max-width: 425px) {
+    .footer {
+      margin-left: 0px;
+    
+    }
+  }

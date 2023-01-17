@@ -1,0 +1,64 @@
+@import '../../../variables.module.scss';
+
+.info-filter {
+    width: 502px;
+    height: 50px;
+    background: $main-white;
+    border: 1px solid $border-light-grey;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    margin-left: 252px;
+  }
+  
+  .info-filter__item {
+    list-style: none;
+    width: 168px;
+    height: 50px;
+    border: 0;
+    background: inherit;
+    border-right: 1px solid $border-light-grey;
+    cursor: pointer;
+    user-select: none;
+
+    text-align: center;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: $text-dark;
+  }
+
+  .info-filter__item:first-child {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+  }
+  
+  .info-filter__item:last-child {
+    border-right: none;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
+  
+  .info-filter__item:hover,
+  .info-filter__item p:hover {
+    background: $active-blue;
+    border-radius: 5px;
+    color: $main-white;
+  }
+
+  .active {
+    background: $active-blue;
+    border-radius: 5px;
+    color: $main-white;
+  }
+  
+
+  @media (max-width: 768px) {
+    .info-filter {
+      width: 502px;
+      height: 45px;
+      margin: 0 auto;
+      margin-top: 20px;
+    }
+  }

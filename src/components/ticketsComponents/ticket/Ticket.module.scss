@@ -1,0 +1,57 @@
+@import '../../../variables.module.scss';
+
+.ticket {
+    width: 502px;
+    min-height: 184px;
+    background: $main-white;
+    border: 1px solid $border-light-grey;
+    border-radius: 5px;
+    margin: 20px 0 0px 252px;
+  }
+  
+  .ticket__header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 20px;
+  }
+  
+  .ticket__price {
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    color: $active-blue;
+  }
+  
+  .ticket__header img {
+    width: 110px;
+    height: 36px;
+  }
+  
+  .ticket-info {
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 55px 10px 20px;
+    color: $text-dark;
+  }
+  
+  .ticket-info__item__grey {
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    font-size: 12px;
+    color: $text-light;
+  }
+
+  @media (max-width: 768px) {
+    .ticket {
+ 
+      margin-left: 235px;
+    }
+
+    .ticket {
+      margin: 0 auto;
+      margin-top: 20px;
+    }
+  }

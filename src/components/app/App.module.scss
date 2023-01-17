@@ -1,0 +1,40 @@
+@import '../../variables.module.scss';
+
+.app {
+  background: $bg-grey;
+  font-weight: 600;
+}
+
+.app-wrapper {
+  position: relative;
+  min-height: 100vh;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 103px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  padding: 50px 0 30px;
+  text-align: center;
+
+}
+
+.logo {
+  width: 65px;
+  height: 65px;
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: 30px 0 30px;
+    text-align: center;
+  }
+  .logo {
+    display: block;
+    margin-left: 205px;
+  }
+}
