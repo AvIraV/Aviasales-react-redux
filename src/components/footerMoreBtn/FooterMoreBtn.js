@@ -1,7 +1,7 @@
 import React from 'react'
 import { useDispatch } from 'react-redux'
 
-import { showMoreTickets } from '../ticketsComponents/ticketSlice'
+import { showMoreTickets } from '../../store/ticketSlice'
 
 import classes from './FooterMoreBtn.module.scss'
 

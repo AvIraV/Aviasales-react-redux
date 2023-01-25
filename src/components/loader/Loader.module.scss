@@ -6,14 +6,27 @@
     border-radius: 40px;
 }
 
+.loadbar {
+    width: 502px;
+    margin: 20px 0 0px 252px;
+}
+ 
 @media (max-width: 768px) {
     .loader {
         margin: 0 auto;
+    }
+
+    .loadbar {
+        margin-left: 30px;
     }
   }
 
   @media (max-width: 425px) {
     .loader {
         margin-left: 185px;
+    }
+
+    .loadbar {
+        margin-left: 0px;
     }
   }

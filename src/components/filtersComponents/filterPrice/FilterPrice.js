@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux'
 
-import { sortTickets } from '../filterSlice'
+import { sortTickets } from '../../../store/filterSlice'
 
 import classes from './FilterPrice.module.scss'
 

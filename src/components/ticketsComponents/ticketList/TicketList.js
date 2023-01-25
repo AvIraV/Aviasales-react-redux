@@ -2,9 +2,10 @@ import { useSelector, useDispatch } from 'react-redux'
 import { useEffect } from 'react'
 import { v4 as uuidv4 } from 'uuid'
 
-import { fetchSeachID, fetchTicketPart } from '../ticketSlice'
+import { fetchSeachID, fetchTicketPart } from '../../../services/services'
 import Ticket from '../ticket/Ticket'
 import Loader from '../../loader/Loader'
+import Loadbar from '../../loader/Loadbar'
 import FooterMoreBtn from '../../footerMoreBtn/FooterMoreBtn'
 import { filteringTickets } from '../../filtersComponents/filterFunctions/filteringTickets'
 import { sortingTickets } from '../../filtersComponents/filterFunctions/sortingTickets'
@@ -41,6 +42,7 @@ const TicketList = () => {
   return (
     <div>
       <div className={classes.tickets}>
+        {ticketsLoadingStatus === 'fetching' || ticketsLoadingStatus === 'stop spinner' ? <Loadbar /> : null}
         {filteredTickets.slice(0, numberOfTickets).map((item) => {
           return <Ticket {...item} key={uuidv4()} />
         })}

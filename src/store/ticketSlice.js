@@ -1,4 +1,6 @@
-import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'
+import { createSlice } from '@reduxjs/toolkit'
+
+import { fetchSeachID, fetchTicketPart } from '../services/services'
 /* eslint-disable indent */
 const initialState = {
   ticketsLoadingStatus: '',
@@ -8,14 +10,6 @@ const initialState = {
   searchId: '',
   errorStatus: '',
 }
-
-export const fetchSeachID = createAsyncThunk('tickets/fetchSeachID', async () => {
-  return await fetch('https://aviasales-test-api.kata.academy/search').then((res) => res.json())
-})
-
-export const fetchTicketPart = createAsyncThunk('tickets/fetchTicketPart', async (searchId) => {
-  return await fetch(`https://aviasales-test-api.kata.academy/tickets?searchId=${searchId}`).then((res) => res.json())
-})
 
 const ticketSlice = createSlice({
   name: 'tickets',
@@ -39,6 +33,7 @@ const ticketSlice = createSlice({
         state.errorStatus = ''
         if (!action.payload.stop) {
           state.nameTicketPart = state.nameTicketPart + 1
+          state.ticketsLoadingStatus = 'stop spinner'
           state.tickets = [...state.tickets, ...action.payload.tickets]
         } else if (action.payload.stop) {
           state.ticketsLoadingStatus = 'fetched'

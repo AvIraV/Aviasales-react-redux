@@ -1,7 +1,7 @@
 import { configureStore } from '@reduxjs/toolkit'
 
-import filters from '../components/filtersComponents/filterSlice'
-import tickets from '../components/ticketsComponents/ticketSlice'
+import filters from './filterSlice'
+import tickets from './ticketSlice'
 
 const store = configureStore({
   reducer: { filters, tickets },
